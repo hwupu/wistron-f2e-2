@@ -1,0 +1,20 @@
+@charset "utf-8"
+
+$CUB-gotop-size: 32pt
+$CUB-gotop-offset: 22pt
+
+.CUB
+  &-scroll-top
+    position: absolute
+    right: $CUB-gotop-offset
+    bottom: $CUB-gotop-offset
+    background-image: url('~assets/images/gotop.png')
+    background-size: $CUB-gotop-size $CUB-gotop-size
+    background-repeat: no-repeat
+    overflow: hidden
+    color: rgba( 0, 0, 0, 0)
+    height: $CUB-gotop-size
+    width: $CUB-gotop-size
+
+    &:hover, &:focus, &:visited
+      color: rgba( 0, 0, 0, 0)

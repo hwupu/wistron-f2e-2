@@ -18,7 +18,8 @@ $info:    $CUB-color-green3
 $text:    $CUB-color-black
 
 // Overwrite default values
-$navbar-breakpoint: $tablet - 1px
+$mobile: $tablet - 1px
+$navbar-breakpoint: $mobile
 
 // Import bulma styles
 @import "~bulma"
@@ -29,4 +30,8 @@ $navbar-breakpoint: $tablet - 1px
 // Customize look styles
 @import './CUB-header.sass'
 @import './CUB-footer.sass'
+@import './CUB-scroll-top.sass'
 
+.CUB
+  &-nobreak
+    word-break: keep-all
