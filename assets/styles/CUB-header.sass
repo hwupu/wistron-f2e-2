@@ -1,0 +1,39 @@
+@charset "utf-8"
+
+$CUB-header-padding: 10pt
+$CUB-header-height: 32pt
+$CUB-header-gradient: linear-gradient(0deg, $CUB-color-green2 0%, $CUB-color-green1 100%)
+$CUB-header-logo-height: $CUB-header-height - (0.7 * $CUB-header-padding)
+
+.CUB
+  &-header
+    @extend .has-text-white
+    background-image: url('~assets/images/logo--pc.png'), $CUB-header-gradient
+    background-position: $CUB-header-padding floor(($CUB-header-height - $CUB-header-logo-height) / 2)-1, 0 0
+    background-size: auto $CUB-header-logo-height, auto auto
+    background-repeat: no-repeat
+    text-align: right
+    font-size: $CUB-header-height - (2 * $CUB-header-padding)
+    line-height: $CUB-header-height - (2 * $CUB-header-padding)
+    padding: $CUB-header-padding
+
+  +until($navbar-breakpoint)
+    &-header
+      background-image: $CUB-header-gradient
+      background-size: auto auto
+      background-position: 0 0
+      text-align: center
+      padding: floor(0.25 * $CUB-header-padding)
+
+      &::before
+        content: 'CUB'
+        display: inline-block
+        background-image: url('~assets/images/logo--mobile.png')
+        background-size: $CUB-header-logo-height $CUB-header-logo-height
+        background-position: 0 -1pt
+        background-repeat: no-repeat
+        color: rgba( 0, 0, 0, 0)
+        height: $CUB-header-logo-height
+        width: $CUB-header-logo-height
+        overflow: hidden
+        vertical-align: middle

@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'wistron-f2e-2',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'zh-tw'
     },
     meta: [
       { charset: 'utf-8' },

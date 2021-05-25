@@ -1,11 +1,11 @@
 <template>
   <section class="section">
-    index
+    Sign up
   </section>
 </template>
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'SignUp'
 }
 </script>

@@ -3,8 +3,30 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all"
 
+// Define custom color swatches
+$CUB-color-green1: rgb( 83, 190, 122)
+$CUB-color-green2: rgb( 14, 170,  72)
+$CUB-color-green3: rgb( 52, 179,  98)
+$CUB-color-orange: rgb(255,  96,   0)
+$CUB-color-grey1:  rgb(250, 250, 250)
+$CUB-color-grey2:  rgb(242, 242, 242)
+$CUB-color-grey3:  rgb(190, 190, 190)
+$CUB-color-black:  rgb(109, 109, 109)
+
+$primary: $CUB-color-orange
+$info:    $CUB-color-green3
+$text:    $CUB-color-black
+
+// Overwrite default values
+$navbar-breakpoint: $tablet - 1px
+
 // Import bulma styles
 @import "~bulma"
 
 // Import buefy styles
 @import "~buefy/src/scss/buefy"
+
+// Customize look styles
+@import './CUB-header.sass'
+@import './CUB-footer.sass'
+
