@@ -81,6 +81,6 @@ export default {
 <style scroped>
 /* to make it look similar to mock image */
 .increase_space {
-  margin-bottom: 80pt;
+  margin-bottom: 50pt;
 }
 </style>
