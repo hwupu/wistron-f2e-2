@@ -1,7 +1,15 @@
 <template>
   <article class="CUB-signup">
     <aside class="CUB-signup-steps">
-      a
+      <b-steps type="is-info" :mobile-mode="null" :has-navigation="false">
+        <b-step-item step="1" label="登錄服務" header-class="CUB-signup-steps-item">
+          <p class="is-hidden-tablet has-text-info is-size-6 has-text-centered">
+            登錄服務
+          </p>
+        </b-step-item>
+        <b-step-item label="確認資訊" header-class="CUB-signup-steps-item">
+        </b-step-item>
+      </b-steps>
     </aside>
 
     <section class="container is-max-desktop section">
