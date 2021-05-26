@@ -1,0 +1,50 @@
+@charset "utf-8"
+
+.CUB
+  &-flex
+    margin-top: 2rem
+    margin-bottom: 2rem
+    display: flex
+    width: 100%
+
+    & > *
+      display: flex
+      padding: 1rem
+      flex-grow: 1
+      flex-shrink: 1
+
+    &-steps
+      color: $CUB-color-green3
+
+
+  +until($navbar-breakpoint)
+    &-flex
+      flex-direction: column
+
+      &-steps
+        min-width: 3.5rem
+        &::after
+          content: '.'
+
+      & > *:not(:last-child)
+        border-bottom: 1pt solid $CUB-color-grey3
+
+  
+  +from($navbar-breakpoint)
+    &-flex
+      text-align: center
+      align-items: center
+
+      & > *
+        flex-direction: column
+
+      &-steps
+        order: 1
+
+      img
+        order: 2
+
+      & > *:not(:first-child)::before
+        content: 'A'
+        background-color: orange
+        flex-basis: 3rem

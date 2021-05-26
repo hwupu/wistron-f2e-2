@@ -1,0 +1,27 @@
+@charset "utf-8"
+
+.CUB
+  &-banner
+    @extend .has-text-white
+    background-image: url('~assets/images/banner-overlay.svg'), url('~assets/images/banner.png')
+    background-repeat: no-repeat, no-repeat
+    background-size: auto 100%, cover
+    background-position: top 0 left -500pt, 0 0
+    height: 100pt
+
+    & h3
+      @extend .has-text-white
+
+  +from($tablet)
+    &-banner
+      background-position: top 0 left -750pt, 0 0
+      height: 150pt
+  +from($desktop)
+    &-banner
+      background-position: top 0 left -700pt, 0 0
+  +from($widescreen)
+    &-banner
+      background-position: top 0 left -600pt, 0 0
+  +from($fullhd)
+    &-banner
+      background-position: top 0 left -500pt, 0 0

@@ -3,9 +3,7 @@
     <header class="CUB-header">
       立即購
     </header>
-    <article class="container">
-      <nuxt />
-    </article>
+    <nuxt />
     <footer class="CUB-footer">
       <aside>
         <div class="CUB-footer-slogan">

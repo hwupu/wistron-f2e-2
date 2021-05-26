@@ -1,8 +1,5 @@
 @charset "utf-8"
 
-// Import Bulma's core
-@import "~bulma/sass/utilities/_all"
-
 // Define custom color swatches
 $CUB-color-green1: rgb( 83, 190, 122)
 $CUB-color-green2: rgb( 14, 170,  72)
@@ -16,6 +13,9 @@ $CUB-color-black:  rgb(109, 109, 109)
 $primary: $CUB-color-orange
 $info:    $CUB-color-green3
 $text:    $CUB-color-black
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all"
 
 // Overwrite default values
 $mobile: $tablet - 1px
@@ -31,7 +31,15 @@ $navbar-breakpoint: $mobile
 @import './CUB-header.sass'
 @import './CUB-footer.sass'
 @import './CUB-scroll-top.sass'
+@import './CUB-banner.sass'
+@import './CUB-flex.sass'
 
 .CUB
   &-nobreak
     word-break: keep-all
+  &-wide-button
+    padding-left: 3rem !important
+    padding-right: 3rem !important
+  +until($navbar-breakpoint)
+    &-wide-button
+      width: 100%
