@@ -9,29 +9,55 @@
       </div>
     </section>
     <section class="container is-max-desktop section">
-      <p>
+      <p class="has-text-weight-medium">
         立即夠快捷支付，登錄開通好康多！
       </p>
-      <div class="CUB-flex">
-        <div>
-          <img src="~/assets/images/prepare-paper.png">
-          <div class="CUB-flex-steps">Step 1</div>
-          <div>國泰世華銀行登錄立即購服務</div>
-        </div>
-        <div>
-          <img src="~/assets/images/upload-success-pc.png">
-          <div class="CUB-flex-steps">Step 2</div>
-          <div>TreeMail 開通立即購服務</div>
-        </div>
-        <div>
-          <img src="~/assets/images/shopping-bag.png">
-          <div class="CUB-flex-steps">Step 3</div>
-          <div>TreeMail 開始使用立即購服務</div>
-        </div>
-      </div>
+      <ol class="CUB-flex">
+        <li>
+          <figure class="image is-128x128">
+            <img src="~/assets/images/prepare-paper.png" alt="國泰世華銀行登錄立即購服務">
+          </figure>
+          <div class="CUB-flex-steps">
+            Step 1
+          </div>
+          <div>
+            國泰世華銀行登錄立即購服務
+          </div>
+        </li>
+        <li class="CUB-flex-arrow">
+          &gt;
+        </li>
+        <li>
+          <figure class="image is-128x128">
+            <img src="~/assets/images/upload-success-pc.png" alt="TreeMail 開通立即購服務">
+          </figure>
+          <div class="CUB-flex-steps">
+            Step 2
+          </div>
+          <div>
+            TreeMail 開通立即購服務
+          </div>
+        </li>
+        <li class="CUB-flex-arrow">
+          &gt;
+        </li>
+        <li>
+          <figure class="image is-128x128">
+            <img src="~/assets/images/shopping-bag.png" alt="TreeMail 開始使用立即購服務">
+          </figure>
+          <div class="CUB-flex-steps">
+            Step 3
+          </div>
+          <div>
+            TreeMail 開始使用立即購服務
+          </div>
+        </li>
+      </ol>
       <div class="level">
         <div class="level-item">
-          <a class="button is-primary is-rounded CUB-wide-button">立即購服務登錄</a>
+          <NuxtLink to="/form" class="button is-primary is-rounded CUB-wide-button">
+            立即購服務登錄
+          </NuxtLink>
         </div>
       </div>
     </section>

@@ -1,20 +1,35 @@
 @charset "utf-8"
 
+$CUB-flex-padding: 10pt
+$CUB-flex-arrow-size: 10pt
+$CUB-flex-seperator-width: 1pt
+$CUB-flex-seperator-color: $CUB-color-grey3
+
 .CUB
   &-flex
     margin-top: 2rem
     margin-bottom: 2rem
     display: flex
     width: 100%
+    font-weight: 500
 
     & > *
       display: flex
-      padding: 1rem
+      padding: $CUB-flex-padding
       flex-grow: 1
       flex-shrink: 1
 
     &-steps
       color: $CUB-color-green3
+
+    &-arrow
+      @extend .is-hidden-mobile
+      color: rgba( 0, 0, 0, 0)
+      overflow: hidden
+      background-image: url('~assets/images/icon_p.png')
+      background-position: center center
+      background-size: 16pt 16pt
+      background-repeat: no-repeat
 
 
   +until($navbar-breakpoint)
@@ -27,24 +42,42 @@
           content: '.'
 
       & > *:not(:last-child)
-        border-bottom: 1pt solid $CUB-color-grey3
+        border-bottom: $CUB-flex-seperator-width solid $CUB-flex-seperator-color
+        margin-bottom: $CUB-flex-padding
 
+      & > *:not(:first-child)::before, & > *:not(:first-child)::after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        margin: ($CUB-flex-padding * -2 - $CUB-flex-seperator-width) auto 0 auto
+        width: 0
+        height: 0
+
+      & > *:not(:first-child)::before
+        border-top:   $CUB-flex-arrow-size solid $CUB-flex-seperator-color
+        border-left:  $CUB-flex-arrow-size solid transparent
+        border-right: $CUB-flex-arrow-size solid transparent
+
+      & > *:not(:first-child)::after
+        border-top:   ($CUB-flex-arrow-size - $CUB-flex-seperator-width) solid $white
+        border-left:  ($CUB-flex-arrow-size - $CUB-flex-seperator-width) solid transparent
+        border-right: ($CUB-flex-arrow-size - $CUB-flex-seperator-width) solid transparent
   
   +from($navbar-breakpoint)
     &-flex
       text-align: center
       align-items: center
+      flex-direction: row
 
       & > *
         flex-direction: column
+        text-align: center
+        align-items: center
 
-      &-steps
-        order: 1
-
-      img
+      & > * > *:first-child
         order: 2
-
-      & > *:not(:first-child)::before
-        content: 'A'
-        background-color: orange
-        flex-basis: 3rem
+      & > * > *:n-child(1)
+        order: 1
+      & > * > *:last-child
+        order: 3
