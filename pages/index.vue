@@ -53,7 +53,7 @@
           </div>
         </li>
       </ol>
-      <div class="level">
+      <div class="level increase_space">
         <div class="level-item">
           <NuxtLink to="/form" class="button is-primary is-rounded CUB-wide-button">
             立即購服務登錄
@@ -69,3 +69,10 @@ export default {
   name: 'HomePage'
 }
 </script>
+
+<style scroped>
+/* to make it look similar to mock image */
+.increase_space {
+  margin-bottom: 80pt;
+}
+</style>
