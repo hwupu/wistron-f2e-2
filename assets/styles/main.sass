@@ -17,9 +17,30 @@ $text:    $CUB-color-black
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all"
 
+
+
 // Overwrite default values
 $mobile: $tablet - 1px
 $navbar-breakpoint: $mobile
+$card-shadow: no-shadow
+$card-header-background-color: $CUB-color-grey1
+$card-header-shadow: no-shadow
+$card-header-padding: 0.75rem 2rem
+$card-header-weight: 400
+$card-content-padding: 2rem
+$card-border-width: 1pt
+$card-border-color: $CUB-color-grey3
+.card
+  &-header, &-content, &-footer
+    border: $card-border-width solid $card-border-color
+$checkbox-border-color: $CUB-color-green3
+.checkbox
+  input[type=checkbox] + .check
+    box-shadow: none
+  input[type=checkbox]:checked + .check
+    box-shadow: none
+$label-weight: 500
+
 
 // Import bulma styles
 @import "~bulma"
@@ -33,6 +54,7 @@ $navbar-breakpoint: $mobile
 @import './CUB-scroll-top.sass'
 @import './CUB-banner.sass'
 @import './CUB-flex.sass'
+@import './CUB-signup.sass'
 
 .CUB
   &-nobreak

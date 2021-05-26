@@ -1,0 +1,29 @@
+@charset "utf-8"
+
+$CUB-icon-menu-size: 22pt
+
+.CUB
+  &-signup
+    &-steps
+      background-color: $CUB-color-grey1
+      min-height: 80pt
+
+  &-icon
+    &-menu
+      display: inline-block
+      background-image: url('~assets/images/accordion--pc.png')
+      background-size: auto (2 * $CUB-icon-menu-size)
+      background-position: 0 0
+      background-repeat: no-repeat
+      width: $CUB-icon-menu-size
+      height: $CUB-icon-menu-size
+      color: rgba( 0, 0, 0, 0)
+      overflow: hidden
+
+      &.is-active
+        background-position: 0 (-1 * $CUB-icon-menu-size)
+
+// To over write field label width to make it wider
+.field-label
+  +tablet
+    flex-basis: 100pt
